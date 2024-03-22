@@ -7,7 +7,6 @@ export class BaseCronometro {
 
     dibujar() {
         this.dibujarBordeVerde();
-        // this.dibujarEsferaExterna();
         this.dibujarEsferaCentral();
         this.dibujarNumeros();
         this.dibujarLineas();
@@ -19,13 +18,6 @@ export class BaseCronometro {
         this.ctx.lineWidth = 5; // Ajustar el ancho del borde según sea necesario
         this.ctx.arc(this.radio, this.radio, this.radio - 2.5, 0, 2 * Math.PI); // El radio se reduce ligeramente para que el borde esté dentro del canvas
         this.ctx.stroke();
-    }
-
-    dibujarEsferaExterna() {
-        this.ctx.beginPath();
-        this.ctx.fillStyle = '#8E8F90';
-        this.ctx.arc(this.radio, this.radio, this.radio - 10, 0, 2 * Math.PI);
-        this.ctx.fill();
     }
 
     dibujarEsferaCentral() {
