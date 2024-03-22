@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+
+        <script type="module" src="app.js" defer></script>
+        <title>Cronómetro</title>
+    </head>
+    <body>
+        <div>
+            <canvas id="baseCronometro" height="500" width="500"> Tu navegador no soporta Canvas! </canvas>
+            <canvas id="manecillasCronometro" height="500" width="500"> Tu navegador no soporta Canvas! </canvas>
+            <button id="botonInicio" class="boton"></button>
+            <button id="botonReset" class="boton"></button>
+        </div>
+        <div id="acumulado"><span id="horas">00</span>:<span id="minutos">00</span>:<span id="segundos">00</span></div>
+    </body>
+</html>

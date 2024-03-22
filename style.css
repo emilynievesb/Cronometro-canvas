@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #2a2c36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#acumulado {
+    position: absolute;
+    bottom: 120px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: white;
+}
+canvas {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.boton {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+.pressed {
+    transform: translateY(2px); /* Desplazar hacia abajo 2px cuando se presiona el botón */
+}
+
+#botonInicio {
+    /* Calcula la posición para el botón de inicio */
+    background-color: #8e8f90;
+    bottom: 198px;
+    right: 132px;
+    transform-origin: 50% 50%;
+    transform: rotate(60deg) translate(-50%, -100%);
+}
+
+#botonReset {
+    /* Calcula la posición para el botón de reset */
+    background-color: red;
+    bottom: 263px;
+    right: 17px;
+}
+span {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: white;
+}
