@@ -19,6 +19,17 @@ body {
     font-size: 24px;
     color: white;
 }
+#reloj {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: white;
+}
 canvas {
     position: absolute;
     bottom: 50%;

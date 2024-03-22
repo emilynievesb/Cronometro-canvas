@@ -34,3 +34,35 @@ document.getElementById('botonInicio').addEventListener('click', function (e) {
     manecillasCronometro.contador = 0; // Restablece el contador del cronómetro
     manecillasCronometro.dibujarManecilla(); // Vuelve a dibujar la manecilla
 });
+
+function actualizarReloj() {
+    // Obtener la fecha y hora actual
+    let ahora = new Date();
+
+    // Obtener los componentes de la fecha y hora
+    let dia = ahora.getDate();
+    let mes = ahora.getMonth() + 1; // Los meses comienzan desde 0
+    let año = ahora.getFullYear();
+
+    let horas = ahora.getHours();
+    let minutos = ahora.getMinutes();
+    let segundos = ahora.getSeconds();
+
+    // Formatear los componentes de la fecha y hora para que tengan siempre dos dígitos
+    dia = dia < 10 ? '0' + dia : dia;
+    mes = mes < 10 ? '0' + mes : mes;
+    horas = horas < 10 ? '0' + horas : horas;
+    minutos = minutos < 10 ? '0' + minutos : minutos;
+    segundos = segundos < 10 ? '0' + segundos : segundos;
+
+    // Construir las cadenas de fecha y hora
+    let fechaActual = dia + '/' + mes + '/' + año;
+    let horaActual = horas + ':' + minutos + ':' + segundos;
+
+    // Actualizar el contenido de los elementos HTML
+    document.getElementById('fecha').textContent = fechaActual;
+    document.getElementById('hora').textContent = horaActual;
+}
+
+// Actualizar el reloj cada segundo
+setInterval(actualizarReloj, 1000);
